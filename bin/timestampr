@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+
+use ventrec\Timestampr\Timestampr;
+
+require __DIR__ . '/../src/bootstrap.php';
+
+$dobber = new Timestampr();
+$dobber->run();

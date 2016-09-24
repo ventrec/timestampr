@@ -1,0 +1,24 @@
+{
+    "name": "ventrec/timestampr",
+    "type": "tool",
+    "description": "Updates timestamp columns in your database that violates the new nullable requirement in newer mysql versions",
+    "keywords": ["mysql", "timestamp"],
+    "homepage": "https://github.com/ventrec/timestampr",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Runar Jørgensen",
+            "email": "ventrec@ventrec.org"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6.0",
+        "vlucas/phpdotenv": "^2.4",
+        "symfony/console": "^3.1"
+    },
+    "autoload": {
+        "psr-4": { "ventrec\\Timestampr\\": "src/Timestampr" }
+    },
+    "bin": ["bin/timestampr"]
+}
