@@ -5,7 +5,7 @@ Timestampr is a tool that updates timestamp columns in your mysql database that 
 ### Installation
 
 ```sh
-composer install --global timestampr
+composer global require ventrec/timestampr
 ```
 
 ### How to use it
