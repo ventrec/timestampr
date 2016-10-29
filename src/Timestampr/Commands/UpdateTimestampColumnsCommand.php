@@ -214,10 +214,10 @@ class UpdateTimestampColumnsCommand extends Command
 
     private function buildUpdateQuery($table, $columns)
     {
-        $query = "ALTER TABLE {$table} ";
+        $query = "ALTER TABLE '{$table}' ";
 
         foreach ($columns as $column) {
-            $query .= "MODIFY COLUMN {$column} TIMESTAMP NULL, ";
+            $query .= "MODIFY COLUMN '{$column}' TIMESTAMP NULL, ";
         }
 
         return substr($query, 0, -2) . ";";
