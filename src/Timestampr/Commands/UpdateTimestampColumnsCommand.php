@@ -139,7 +139,7 @@ class UpdateTimestampColumnsCommand extends Command
 
     private function setDbPort()
     {
-        if ($this->input->hasArgument('port')) {
+        if ($this->input->getArgument('port')) {
             $this->port = $this->input->getArgument('port');
         } else if (!empty(getenv('DB_PORT'))) {
             $this->port = getenv('DB_PORT');
@@ -214,10 +214,10 @@ class UpdateTimestampColumnsCommand extends Command
 
     private function buildUpdateQuery($table, $columns)
     {
-        $query = "ALTER TABLE {$table} ";
+        $query = "ALTER TABLE '{$table}' ";
 
         foreach ($columns as $column) {
-            $query .= "MODIFY COLUMN {$column} TIMESTAMP NULL, ";
+            $query .= "MODIFY COLUMN '{$column}' TIMESTAMP NULL, ";
         }
 
         return substr($query, 0, -2) . ";";
