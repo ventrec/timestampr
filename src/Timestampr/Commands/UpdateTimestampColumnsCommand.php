@@ -139,7 +139,7 @@ class UpdateTimestampColumnsCommand extends Command
 
     private function setDbPort()
     {
-        if ($this->input->hasArgument('port')) {
+        if ($this->input->getArgument('port')) {
             $this->port = $this->input->getArgument('port');
         } else if (!empty(getenv('DB_PORT'))) {
             $this->port = getenv('DB_PORT');
